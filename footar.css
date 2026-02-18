@@ -1,0 +1,47 @@
+.eyeonic-footer {
+  background: linear-gradient(135deg, #0f2a44, #1e4f8a);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.footer-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffd24d;
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 13px;
+  color: #ddd;
+}
