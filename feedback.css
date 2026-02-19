@@ -1,10 +1,10 @@
 .feedback-section{
   padding: 120px 0;
-  background: radial-gradient(circle at top,#0f1c2e,#02060d);
+  background: linear-gradient(135deg, #000428, #004e92, #005bea, #00c6fb);
   font-family: 'Poppins', sans-serif;
 }
 
-/* MAIN BOX */
+
 .feedback-box{
   display: flex;
   gap: 70px;
@@ -17,7 +17,6 @@
   overflow: hidden;
 }
 
-/* GLOW BORDER */
 .feedback-box::before{
   content: "";
   position: absolute;
@@ -38,7 +37,7 @@
   100%{filter: hue-rotate(360deg);}
 }
 
-/* LEFT SIDE */
+
 .feedback-info{
   flex: 1;
   color: white;
@@ -53,12 +52,12 @@
   color: rgba(255,255,255,0.7);
 }
 
-/* RIGHT FORM */
+
 .feedback-form{
   flex: 1;
 }
 
-/* FIELDS */
+
 .field{
   position: relative;
   margin-bottom: 35px;
@@ -84,7 +83,7 @@
   transition: .3s;
 }
 
-/* FLOAT */
+
 .field input:focus + label,
 .field textarea:focus + label,
 .field input:valid + label,
@@ -99,7 +98,7 @@
   border-color: #00aaff;
 }
 
-/* BUTTON */
+
 .btn-send{
   width: 100%;
   padding: 15px;
@@ -113,7 +112,7 @@
   transition: .4s;
 }
 
-/* SHINE EFFECT */
+
 .btn-send::after{
   content: "";
   position: absolute;
@@ -135,7 +134,7 @@
   box-shadow: 0 15px 40px rgba(0,170,255,.6);
 }
 
-/* RESPONSIVE */
+
 @media(max-width:992px){
   .feedback-box{
     flex-direction: column;
