@@ -1,47 +1,124 @@
-.eyeonic-footer {
-  background: linear-gradient(135deg, #0f2a44, #1e4f8a);
-  color: #fff;
-  font-family: Arial, sans-serif;
+
+
+.ultra-footer{
+  background: linear-gradient(-45deg,#000428,#003b8b,#005bea,#00c6fb);
+  background-size: 300% 300%;
+  animation: gradientFlow 12s ease infinite;
+  position: relative;
+  overflow: hidden;
 }
 
-.footer-logo {
-  font-size: 28px;
-  font-weight: bold;
+/* Animated Gradient */
+@keyframes gradientFlow{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
-.footer-title {
-  font-size: 18px;
-  margin-bottom: 15px;
+/* Glass Overlay */
+.ultra-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
 }
 
-.footer-text {
-  font-size: 14px;
-  color: #e0e0e0;
-  line-height: 1.6;
+/* Content above overlay */
+.ultra-footer .container{
+  position:relative;
+  z-index:2;
 }
 
-.footer-links {
-  list-style: none;
-  padding: 0;
+/* Logo */
+.footer-logo{
+  font-size:30px;
+  font-weight:700;
+  letter-spacing:3px;
+  background: linear-gradient(45deg,#ffffff,#00e0ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.footer-links li {
-  margin-bottom: 10px;
+/* Titles */
+.footer-title{
+  font-weight:600;
+  margin-bottom:18px;
+  position:relative;
 }
 
-.footer-links a {
-  text-decoration: none;
-  color: #e0e0e0;
-  font-size: 14px;
-  transition: 0.3s;
+/* Elegant underline */
+.footer-title::after{
+  content:"";
+  width:40px;
+  height:2px;
+  background:#00c6ff;
+  position:absolute;
+  bottom:-6px;
+  left:0;
+  transition:0.4s;
 }
 
-.footer-links a:hover {
-  color: #ffd24d;
+.footer-title:hover::after{
+  width:70px;
 }
 
-.footer-bottom {
-  background: rgba(0, 0, 0, 0.25);
-  font-size: 13px;
-  color: #ddd;
+/* Links */
+.footer-links li{
+  margin-bottom:12px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:rgba(255,255,255,0.7);
+  transition: all .4s ease;
+}
+
+.footer-links a:hover{
+  color:#00e0ff;
+  padding-left:8px;
+  text-shadow:0 0 8px rgba(0,200,255,0.7);
+}
+
+/* Input */
+.lux-input{
+  background: rgba(255,255,255,0.08);
+  border:none;
+  color:white;
+}
+
+.lux-input::placeholder{
+  color:rgba(255,255,255,0.6);
+}
+
+/* Button */
+.btn-lux{
+  background: linear-gradient(45deg,#0066ff,#00e0ff);
+  border:none;
+  color:white;
+  font-weight:600;
+  transition:.4s;
+}
+
+.btn-lux:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,200,255,0.6);
+}
+
+/* Divider */
+.footer-divider{
+  border-color:rgba(255,255,255,0.2);
+  margin:40px 0 20px;
+}
+
+.footer-copy{
+  font-size:14px;
+  color:rgba(255,255,255,0.6);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .footer-logo{
+    text-align:center;
+  }
 }
